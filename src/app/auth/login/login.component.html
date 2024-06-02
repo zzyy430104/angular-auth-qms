@@ -1,0 +1,31 @@
+<div class="loginBGC">
+  <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
+    <h2>登 录</h2>
+    <div class="form-floating mb-3 mt-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="input email"
+        name="email"
+        formControlName="email"
+        required
+      />
+      <label for="email">邮箱</label>
+    </div>
+
+    <div class="form-floating mt-3 mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        placeholder="input password"
+        name="pswd"
+        formControlName="password"
+        required
+      />
+      <label for="pwd">密码</label>
+    </div>
+    <button class="btn btn-success btn-custom">ENTER</button>
+  </form>
+</div>
