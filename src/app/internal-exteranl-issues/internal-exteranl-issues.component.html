@@ -9,7 +9,7 @@ createdDate: Date;
 createdByPerson: string;
 reviewIntervalonMonth: number;
 approvedBy: string;
-isClosed: boolean; 
+isClosed: boolean;
 closedDate: Date;-->
 
 <form
@@ -47,19 +47,19 @@ closedDate: Date;-->
           <option value="">外部</option>
         </select>
       </div>
-      <!-- <div class="formgroup">
+      <div class="formgroup">
         <label for=""
           >方面（法规/技术/竞争/市场/文化/社会/经济环境/价值/知识/组织绩效）</label
         >
-        <input type="checkbox" formControlName="areaFrom" />
-      </div> -->
-      <fieldset class="field-custom">
+        <input type="text" formControlName="areaFrom" />
+      </div>
+      <!-- <fieldset class="field-custom">
         <legend>方面</legend>
         <div>
           <input
             type="checkbox"
             id="legal"
-            formControlName="areaFrom"
+            formControlName="areaFrom[legal]"
             value="legal"
           />
           <label for="legal">法规</label>
@@ -68,7 +68,7 @@ closedDate: Date;-->
           <input
             type="checkbox"
             id="tech"
-            formControlName="areaFrom"
+            formControlName="areaFrom[tech]"
             value="tech"
           />
           <label for="tech">技术</label>
@@ -82,7 +82,7 @@ closedDate: Date;-->
           />
           <label for="competite">竞争</label>
         </div>
-      </fieldset>
+      </fieldset> -->
 
       <div class="formgroup">
         <label for="">评审周期（月）</label>
@@ -95,8 +95,8 @@ closedDate: Date;-->
       <div class="formgroup">
         <label for="">状态</label>
         <select id="" name="" formControlName="isClosed">
-          <option value="">未关闭</option>
-          <option value="">关闭</option>
+          <option value="false">未关闭</option>
+          <option value="true">关闭</option>
         </select>
       </div>
       <div class="formgroup">
