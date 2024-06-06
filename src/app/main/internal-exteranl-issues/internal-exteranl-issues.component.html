@@ -1,0 +1,110 @@
+<!-- id: number;
+issueSeriaNumber: string;
+description: string;
+relevant: string;
+effectivness: string;
+isInternal: boolean;
+areaFrom: string;
+createdDate: Date;
+createdByPerson: string;
+reviewIntervalonMonth: number;
+approvedBy: string;
+isClosed: boolean;
+closedDate: Date;-->
+
+<form
+  class="container-issues"
+  [formGroup]="issuesInputForm"
+  (ngSubmit)="submitIssueForm()"
+>
+  <h5>公司内外部环境管理</h5>
+  <div class="issuesInputForm">
+    <form action="">
+      <div class="formgroup">
+        <label for="">创建日期</label>
+        <input type="datetime-local" formControlName="createdDate" />
+      </div>
+      <div class="formgroup">
+        <label for="">编号</label>
+        <input type="text" formControlName="issueSeriaNumber" />
+      </div>
+      <div class="formgroup">
+        <label for="">描述</label>
+        <input type="text" formControlName="description" />
+      </div>
+      <div class="formgroup">
+        <label for="">相关性</label>
+        <input type="text" formControlName="relevant" />
+      </div>
+      <div class="formgroup">
+        <label for="">影响</label>
+        <input type="text" formControlName="effectivness" />
+      </div>
+      <div class="formgroup">
+        <label for="">内部/外部</label>
+        <select id="" name="" formControlName="isInternal">
+          <option value="">内部</option>
+          <option value="">外部</option>
+        </select>
+      </div>
+      <div class="formgroup">
+        <label for=""
+          >方面（法规/技术/竞争/市场/文化/社会/经济环境/价值/知识/组织绩效）</label
+        >
+        <input type="text" formControlName="areaFrom" />
+      </div>
+      <!-- <fieldset class="field-custom">
+        <legend>方面</legend>
+        <div>
+          <input
+            type="checkbox"
+            id="legal"
+            formControlName="areaFrom[legal]"
+            value="legal"
+          />
+          <label for="legal">法规</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="tech"
+            formControlName="areaFrom[tech]"
+            value="tech"
+          />
+          <label for="tech">技术</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="competence"
+            formControlName="areaFrom"
+            value="competence"
+          />
+          <label for="competite">竞争</label>
+        </div>
+      </fieldset> -->
+
+      <div class="formgroup">
+        <label for="">评审周期（月）</label>
+        <input type="number" formControlName="reviewIntervalonMonth" />
+      </div>
+      <div class="formgroup">
+        <label for="">批准</label>
+        <input type="text" formControlName="approvedBy" />
+      </div>
+      <div class="formgroup">
+        <label for="">状态</label>
+        <select id="" name="" formControlName="isClosed">
+          <option value="false">未关闭</option>
+          <option value="true">关闭</option>
+        </select>
+      </div>
+      <div class="formgroup">
+        <label for="">关闭日期</label>
+        <input type="datetime-local" formControlName="closedDate" />
+      </div>
+    </form>
+  </div>
+
+  <button class="btn btn-primary">提交</button>
+</form>
