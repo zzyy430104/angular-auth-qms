@@ -1,0 +1,14 @@
+.custom-login {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #ecf7f0, #fbfbdb);
+}
+.custom-login > form {
+  width: 550px;
+  height: 350px;
+  background-color: #ebe4e4;
+  border-radius: 10px;
+}
+.custom-login > form > button {
+  display: block;
+  margin: 30px auto;
+}

@@ -1,138 +1,54 @@
-<header class="p-3 text-bg-dark">
+<nav class="navbar navbar-expand-md bg-body-secondary custom-header">
   <div class="container">
-    <div
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-    >
-      <a
-        href="/"
-        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+    <a class="navbar-brand" routerLink="/main">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="25"
+        fill="black"
+        class="bi bi-quora"
+        viewBox="0 0 16 16"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="#7c3aed"
-            d="M20.94 17.46h-1.11c-.06.52-.4 1.17-1.25 1.17c-.78 0-1.34-.54-1.88-1.36a7.233 7.233 0 0 0 2.84-5.81C19.54 7 15.86 4 12.01 4C8.21 4 4.5 7.03 4.5 11.47c0 4.4 3.71 7.43 7.51 7.43c.66 0 1.32-.09 1.95-.26c.74 1.27 1.73 2.36 3.6 2.36c3.1 0 3.45-2.86 3.38-3.54m-5.45-2.18c-.73-1.11-1.66-1.98-3.46-1.98c-1.16 0-2.06.38-2.62.86l.46.92c.24-.11.49-.15.75-.15c1.35 0 2.04 1.17 2.63 2.33c-.38.11-.79.16-1.24.16c-2.85 0-4.08-2.01-4.08-5.95c0-3.96 1.23-5.99 4.08-5.99c2.89 0 4.13 2.03 4.13 5.99c-.01 1.58-.21 2.86-.65 3.81"
-          />
-        </svg>
-      </a>
-
-      <ul
-        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-3"
-      >
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-      </ul>
-
-      <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-        <input
-          type="search"
-          class="form-control form-control-dark text-bg-dark"
-          placeholder="Search..."
-          aria-label="Search"
+        <path
+          d="M8.73 12.476c-.554-1.091-1.204-2.193-2.473-2.193-.242 0-.484.04-.707.142l-.43-.863c.525-.45 1.373-.808 2.464-.808 1.697 0 2.568.818 3.26 1.86.41-.89.605-2.093.605-3.584 0-3.724-1.165-5.636-3.885-5.636-2.68 0-3.839 1.912-3.839 5.636 0 3.704 1.159 5.596 3.84 5.596.425 0 .811-.046 1.166-.15Zm.665 1.3a7 7 0 0 1-1.83.244C3.994 14.02.5 11.172.5 7.03.5 2.849 3.995 0 7.564 0c3.63 0 7.09 2.828 7.09 7.03 0 2.337-1.09 4.236-2.675 5.464.512.767 1.04 1.277 1.773 1.277.802 0 1.125-.62 1.179-1.105h1.043c.061.647-.262 3.334-3.178 3.334-1.767 0-2.7-1.024-3.4-2.224Z"
         />
-      </form> -->
+      </svg>
+    </a>
 
-      <div class="text-end">
-        <button
-          type="button"
-          class="btn btn-outline-light me-4"
-          routerLink="/login"
+    <ul class="nav justify-content-center ms-3">
+      <li>
+        <a class="nav-link text-dark" routerLink="/main/home">主页</a>
+      </li>
+      <li>
+        <a class="nav-link text-dark" routerLink="/main/system">体系</a>
+      </li>
+      <li>
+        <a class="nav-link text-dark" routerLink="/main/product">产品</a>
+      </li>
+      <li>
+        <a class="nav-link text-dark" routerLink="/main/dashboard">看板</a>
+      </li>
+      <li>
+        <a class="nav-link text-dark" routerLink="/main/planning">策划</a>
+      </li>
+    </ul>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon small"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-sm-auto mt-3">
+        <p class="nav-link text-dark">欢迎</p>
+        <a class="nav-link text-dark" style="cursor: pointer" (click)="logout()"
+          >退出</a
         >
-          Logout
-        </button>
-        <button type="button" class="btn btn-outline-success">
-          Welcome, [User.name]
-        </button>
       </div>
     </div>
   </div>
-</header>
-<div
-  class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-  style="width: 15rem"
->
-  <!-- <a
-    href="/"
-    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-  >
-    <svg class="bi pe-none me-2" width="40" height="32">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="fs-4">Sidebar</span>
-  </a>
-  <hr /> -->
-  <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#home" />
-        </svg>
-        Home
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#speedometer2" />
-        </svg>
-        Dashboard
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#table" />
-        </svg>
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#grid" />
-        </svg>
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
-        </svg>
-        Customers
-      </a>
-    </li>
-  </ul>
-  <!-- <hr />
-  <div class="dropdown">
-    <a
-      href="#"
-      class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      <img
-        src="https://github.com/mdo.png"
-        alt=""
-        width="32"
-        height="32"
-        class="rounded-circle me-2"
-      />
-      <strong>mdo</strong>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><hr class="dropdown-divider" /></li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
-    </ul>
-  </div> -->
-</div>
+</nav>
+<router-outlet></router-outlet>

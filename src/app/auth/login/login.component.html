@@ -1,7 +1,11 @@
-<div class="loginBGC">
-  <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
-    <h2>登 录</h2>
-    <div class="form-floating mb-3 mt-3">
+<div class="custom-login d-flex justify-content-center align-items-md-center">
+  <form
+    class="p-3 border border-1 shadow-sm"
+    [formGroup]="loginForm"
+    (ngSubmit)="login()"
+  >
+    <h3 class="my-4 text-center">登 录</h3>
+    <div class="form-floating mb-3 mx-md-5">
       <input
         type="email"
         class="form-control"
@@ -11,10 +15,9 @@
         formControlName="email"
         required
       />
-      <label for="email">邮箱</label>
+      <label class="form-label" for="email">邮箱</label>
     </div>
-
-    <div class="form-floating mt-3 mb-3">
+    <div class="form-floating mb-3 mx-md-5">
       <input
         type="password"
         class="form-control"
@@ -24,8 +27,10 @@
         formControlName="password"
         required
       />
-      <label for="pwd">密码</label>
+      <label class="form-label" for="pwd">密码</label>
     </div>
-    <button class="btn btn-success btn-custom">ENTER</button>
+    <button class="btn btn-success text-uppercase px-5 align-content-center">
+      Enter
+    </button>
   </form>
 </div>

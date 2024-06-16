@@ -1,0 +1,19 @@
+.card-body {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin-top: 20px;
+}
+
+.card-text {
+  margin-top: 15px;
+}
+
+.btn {
+  // background-color: rgb(154, 188, 190);
+  margin-top: auto;
+  margin-bottom: 15px;
+}

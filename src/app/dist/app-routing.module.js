@@ -12,9 +12,25 @@ var router_1 = require("@angular/router");
 var login_component_1 = require("./auth/login/login.component");
 var canActive_service_1 = require("../app/auth/canActive.service");
 var main_component_1 = require("./main/main.component");
+var planning_component_1 = require("./main/planning/planning.component");
+var home_component_1 = require("./main/home/home.component");
+var system_component_1 = require("./main/system/system.component");
+var dashboard_component_1 = require("./main/dashboard/dashboard.component");
+var product_component_1 = require("./main/product/product.component");
 var routes = [
     { path: "login", component: login_component_1.LoginComponent, pathMatch: "full" },
-    { path: "index", component: main_component_1.MainComponent, canActivate: [canActive_service_1.canActivateTeam] },
+    {
+        path: "main",
+        component: main_component_1.MainComponent,
+        canActivate: [canActive_service_1.canActivateTeam],
+        children: [
+            { path: "planning", component: planning_component_1.PlanningComponent },
+            { path: "home", component: home_component_1.HomeComponent },
+            { path: "system", component: system_component_1.SystemComponent },
+            { path: "dashboard", component: dashboard_component_1.DashboardComponent },
+            { path: "product", component: product_component_1.ProductComponent },
+        ]
+    },
     { path: "**", redirectTo: "login" },
 ];
 var AppRoutingModule = /** @class */ (function () {
